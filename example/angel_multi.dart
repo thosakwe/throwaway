@@ -15,7 +15,7 @@ main() async {
     ..addExtension('yaml', 'text/yaml');
 
   app.get('/status/int:status', (req, res) {
-    res.statusCode = req.params['status'];
+    res.statusCode = req.params['status'] as int;
     return res.close();
   });
 
